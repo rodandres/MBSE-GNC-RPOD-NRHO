@@ -2,7 +2,8 @@
 
 <!--Capella_Version_7.1.0-->
 <org.polarsys.capella.core.data.capellamodeller:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:libraries="http://www.polarsys.org/capella/common/libraries/7.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CapellaRequirements="http://www.polarsys.org/capella/requirements"
+    xmlns:Requirements="http://www.polarsys.org/kitalpha/requirements" xmlns:libraries="http://www.polarsys.org/capella/common/libraries/7.0.0"
     xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/7.0.0"
     xmlns:org.polarsys.capella.core.data.capellacore="http://www.polarsys.org/capella/core/core/7.0.0"
     xmlns:org.polarsys.capella.core.data.capellamodeller="http://www.polarsys.org/capella/core/modeller/7.0.0"
@@ -41,6 +42,19 @@
       id="214f80f1-0694-482d-acc4-c332f43b1f9a" name="GNC_RPOD_CAPELLA">
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.oa:OperationalAnalysis"
         id="95272edc-c52e-4b46-a099-eae18c2aa180" name="Operational Analysis">
+      <ownedExtensions xsi:type="CapellaRequirements:CapellaModule" id="42829317-bf7e-488e-a112-9ce752247cbf"
+          ReqIFLongName="Needs">
+        <ownedRequirements xsi:type="Requirements:Requirement" id="7931fc89-6739-48d9-b4ff-d71daa62668c"
+            ReqIFLongName="The Visiting Vehicle shall maintain safe operation throughout rendezvous, proximity operations, and docking."/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="4615984b-60e1-4080-8027-24648afc0322"
+            ReqIFLongName="The Visiting Vehicle shall follow trajectories that maintain the required operational and safety constraints during proximity operations."/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="a39aa84b-2a57-4518-85b6-ae0b28b566ad"
+            ReqIFLongName="The Visiting Vehicle shall maintain sufficient knowledge of its own state and the target state to support safe RPOD operations."/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="4ca51795-c498-4cfb-bc07-6b8aea6113e5"
+            ReqIFLongName="The Visiting Vehicle shall maintain sufficient awareness of the target spacecraft state and operational condition to support cooperative RPOD operations."/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="b0e876f1-83c0-401e-b023-df9785bedc05"
+            ReqIFLongName="The RPOD operation shall transition between operational phases according to mission objectives, vehicle state, target conditions, and applicable constraints."/>
+      </ownedExtensions>
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="9475a29c-b161-41d7-bd33-bf1347b98c91" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -619,6 +633,56 @@
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="18d3692d-e9c3-49a0-9c7d-2d9d8430c8e7" name="System Analysis">
+      <ownedExtensions xsi:type="CapellaRequirements:CapellaModule" id="5a4373b7-9dbb-45b5-82e0-262e3c32d0ba"
+          ReqIFLongName="Requirements">
+        <ownedRequirements xsi:type="Requirements:Requirement" id="5a54e088-0dda-4935-a14d-869925bdd89d"
+            ReqIFLongName="The GNC system shall validate incoming navigation sensor data before using the data for state estimation.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="e602b98b-1508-4ab7-b197-c3da65d9f0f6"
+              source="#5a54e088-0dda-4935-a14d-869925bdd89d" target="#afbd9957-017f-4716-bee8-c5448ff6bc6a"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="874a204a-e2cb-4857-a6d7-8778e47dddfe"
+            ReqIFLongName="The GNC system shall monitor the integrity of the navigation solution during RPOD operations.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="f35a9a09-71c0-438b-9b9a-fcc4ffaa1d99"
+              source="#874a204a-e2cb-4857-a6d7-8778e47dddfe" target="#ec7ada53-113e-43a1-8188-5b56fef3369b"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="83a192dc-1619-4550-926a-9de92649e4a5"
+            ReqIFLongName="The GNC system shall synchronize navigation sensor data according to their associated measurement timestamps before sensor fusion.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="47eb4f37-dc95-4f95-896c-617b8db41b53"
+              source="#83a192dc-1619-4550-926a-9de92649e4a5" target="#0aefcf83-bd13-4366-9c61-ce6ba0d620d2"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="80dc87f1-a7ee-4e28-af1a-63f459e6c0e5"
+            ReqIFLongName="The GNC system shall generate reference trajectories according to the active operational phase and applicable guidance parameters.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="58fd46ba-c917-420f-92db-a340fecd7732"
+              source="#80dc87f1-a7ee-4e28-af1a-63f459e6c0e5" target="#f5544fc0-66c6-4a03-97a6-d3a401fb7121"/>
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="16e1cd57-9662-475b-9532-d664ee5fa1be"
+              source="#80dc87f1-a7ee-4e28-af1a-63f459e6c0e5" target="#648bc995-ca9c-40dd-9454-9a76915478e5"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="2f97a117-292f-4f99-bd23-852739454f14"
+            ReqIFLongName="The GNC system shall verify generated reference trajectories against applicable safety constraints before execution.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="373b6511-fbff-4937-b3c5-43790f76ea27"
+              source="#2f97a117-292f-4f99-bd23-852739454f14" target="#886cbddc-efb2-472b-bad9-27ac11ecfc1c"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="b9f8d553-f97f-4348-a957-e5661592c6b8"
+            ReqIFLongName="The GNC system shall allocate the required control effort subject to the available actuator capabilities and constraints.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="ed3cfbe4-22aa-4221-9e7d-151db952f9e4"
+              source="#b9f8d553-f97f-4348-a957-e5661592c6b8" target="#baa78a5a-8b35-4d30-bed3-8c823e958827"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="d804582d-0cd9-4592-8a4b-6ea88b9011d4"
+            ReqIFLongName="The GNC system shall determine an applicable contingency response following detection of an off-nominal condition.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="130b9fec-4c95-4dc9-b12a-823bd252eca5"
+              source="#d804582d-0cd9-4592-8a4b-6ea88b9011d4" target="#d5504db0-2d39-4edc-a0bb-3db5c11ab1d7"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="d6bb88d4-fedd-4968-ac91-9e6e749f5efe"
+            ReqIFLongName="The Mission Control Center shall provide the Visiting Vehicle with the applicable operational phase directive before initiation of each commanded RPOD phase.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="56b2ad02-1169-4c5a-965f-4e5f36cca891"
+              source="#d6bb88d4-fedd-4968-ac91-9e6e749f5efe" target="#7dbb4315-8080-49ce-a376-51f516478d0a"/>
+        </ownedRequirements>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="77ccd406-5550-4c95-8adf-e042da515567"
+            ReqIFLongName="The Target Spacecraft shall provide its state information to the Visiting Vehicle during cooperative proximity operations.">
+          <ownedRelations xsi:type="CapellaRequirements:CapellaIncomingRelation" id="f90e031e-ca41-43c1-9814-7a6f4ce40d9b"
+              source="#77ccd406-5550-4c95-8adf-e042da515567" target="#f309340c-97db-4b3b-94bd-b613c2d4c3c4"/>
+        </ownedRequirements>
+      </ownedExtensions>
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemFunctionPkg"
           id="4d668eca-dfb7-4cf2-9520-ee2dbb6c0017" name="System Functions">
         <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
@@ -1053,10 +1117,10 @@
                 id="00ee9ee1-825d-4b90-895f-ae3d3191666a" targetElement="#873067f3-1498-4055-8743-93cb281a9d60"
                 sourceElement="#15cbe0a4-0145-4774-b867-41ba2212e2bf"/>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="55eaa2d4-5281-4ef4-86c1-b236e1e83a11" name="FunctionalExchange 1"
+                id="55eaa2d4-5281-4ef4-86c1-b236e1e83a11" name="Safety Constrain Violations"
                 target="#2755e4af-5941-4389-a979-454f7cc03c2e" source="#ad7b2a86-9f33-44c4-80a6-ea786cd289c6"/>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="83a2e87e-fbb2-470c-b302-3f8578b5436c" name="FunctionalExchange 2"
+                id="83a2e87e-fbb2-470c-b302-3f8578b5436c" name="Actuator Performance Status"
                 target="#e46ed03f-b69f-417d-9a62-7471e3c46efd" source="#19b87ddc-4f1c-4312-9452-4b628f82bec6"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
@@ -1501,7 +1565,7 @@
               id="48a094a4-6705-4134-8165-d92f00dc5a0e" name="Fault Sensors" target="#1b0f4ad1-cfbb-432e-9fd8-ec6804c480f3"
               source="#d22ddeb2-6923-48e1-998c-887f908fd540"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="a2c645b2-bfd6-438e-925d-a437923d8e08" name="FunctionalExchange 46"
+              id="a2c645b2-bfd6-438e-925d-a437923d8e08" name="Sensor Data Summary"
               target="#3e75111a-3f78-4f9b-b6a0-f6230691fde8" source="#0fd69552-0b3d-439b-b177-3b72d6c9f52c"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e1318405-e53a-40de-b557-47c564bd5a10" name="V.V Absolute State Vector"
@@ -1516,16 +1580,16 @@
               id="d9462da7-1e03-4cae-93b6-5603dad363a1" name="External Relative State Measurement"
               target="#3b583bbb-db72-4525-a1c6-1716a3eb5b81" source="#6979a7fc-deda-40a2-8aea-888b54a004f6"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="28280bd7-c84b-4937-af5c-b1443a2d09ab" name="FunctionalExchange 50"
-              target="#bcd64481-a663-4b51-a0c8-036e7bd462f8" source="#3fab488b-02c7-40be-97c6-22da0f458c9d"/>
+              id="28280bd7-c84b-4937-af5c-b1443a2d09ab" name="Navigation Data" target="#bcd64481-a663-4b51-a0c8-036e7bd462f8"
+              source="#3fab488b-02c7-40be-97c6-22da0f458c9d"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="2e8d6a30-dde9-4b75-b04e-e165d3085cd7" name="Navigation Validity Flag"
               target="#27fb05a3-dcf0-4eb6-82ce-1f6a7e20a97b" source="#2e216e0c-c202-49ce-add9-1c9cc3a22629"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="1a458ded-78e3-4635-98ad-c36aafc3156d" name="FunctionalExchange 52"
+              id="1a458ded-78e3-4635-98ad-c36aafc3156d" name="Navigation Data Validity Status"
               target="#0b4a0943-25a6-42be-a295-1c3e49c2f89f" source="#25b87cb8-9573-4e4b-8bac-c66d821151c4"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="1e013a35-a780-429b-9d57-9a3a6d9c669f" name="FunctionalExchange 53"
+              id="1e013a35-a780-429b-9d57-9a3a6d9c669f" name="Navigation Data Inconsistency"
               target="#0441acde-a91c-4e22-bba1-aa118e89f3c8" source="#534bc3fa-60f9-4f46-936c-85f94e7ebb36"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="f20db96d-8b32-4544-8d8c-b5317cec505a" name="FunctionalExchange 54"
@@ -1873,14 +1937,8 @@
       <ownedSystemComponentPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"
           id="00018a51-3bd5-43f0-b7fe-12b828d78b99" name="Structure">
         <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-            id="658e81ca-9720-43b6-adb9-a1a9bd098d68" targetElement="#b72d4789-e4fe-47bc-86c1-1806ec0e69b7"
-            sourceElement="#f6d3de4b-0dbf-4330-8165-2a0dd7db2ae9"/>
-        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
             id="03518649-9fc4-403d-95ea-72309c1cb22f" targetElement="#dc450fa2-f452-495d-b08c-28657602c7b3"
             sourceElement="#d4705821-87c3-4ddc-b635-8e6fb2be20b7"/>
-        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-            id="433060e1-17bf-4bf6-9acb-a0ffc3a23c9d" targetElement="#8047ae00-56d4-4e7d-be1f-475c3291a607"
-            sourceElement="#e37cf319-aa92-4c92-81e0-4a3c5695ce9b"/>
         <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
             id="5cfa91b0-a6e2-417c-96b8-72220d7a4f67" targetElement="#4effceb6-2b90-4acc-8a77-faf9cc96c099"
             sourceElement="#7b925dab-f336-48fb-b867-f065431fee6d"/>
@@ -1888,10 +1946,6 @@
             name="System of Interest" abstractType="#bceff6d5-e199-4c60-b329-8e65a237e4fc"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="d4705821-87c3-4ddc-b635-8e6fb2be20b7"
             name="Target Spacecraft" abstractType="#7ca80939-7828-4ec7-a3f8-fd1a60fb50c2"/>
-        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="e37cf319-aa92-4c92-81e0-4a3c5695ce9b"
-            name="Communication Satelite Relays" abstractType="#aba46ddd-2137-4ea3-a823-31c82404a537"/>
-        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="f6d3de4b-0dbf-4330-8165-2a0dd7db2ae9"
-            name="Ground Communication Facilities" abstractType="#4c4aacde-ba82-48b8-8961-eb97f2461111"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="7b925dab-f336-48fb-b867-f065431fee6d"
             name="Mission Control Center" abstractType="#7dbb4315-8080-49ce-a376-51f516478d0a"/>
         <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
@@ -2044,20 +2098,6 @@
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="d69715d4-3be5-4c0c-b9d0-4b2dad10ef69" targetElement="#e5234b99-ac45-4735-8153-99bf2200388d"
               sourceElement="#7ca80939-7828-4ec7-a3f8-fd1a60fb50c2"/>
-        </ownedSystemComponents>
-        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
-            id="aba46ddd-2137-4ea3-a823-31c82404a537" name="Communication Satelite Relays"
-            actor="true">
-          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
-              id="28622ce7-3844-49b2-87e6-67d4ae044c61" targetElement="#ef287ebe-6279-459a-a9b5-f1a737c597ea"
-              sourceElement="#aba46ddd-2137-4ea3-a823-31c82404a537"/>
-        </ownedSystemComponents>
-        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
-            id="4c4aacde-ba82-48b8-8961-eb97f2461111" name="Ground Communication Facilities"
-            actor="true">
-          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
-              id="020c80c0-9f33-46ba-85a5-9b4c9af7e8ef" targetElement="#89110467-2242-4fbf-8906-f8629e05bc89"
-              sourceElement="#4c4aacde-ba82-48b8-8961-eb97f2461111"/>
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="7dbb4315-8080-49ce-a376-51f516478d0a" name="Mission Control Center"
