@@ -51,35 +51,31 @@
           ReqIFIdentifier="1" ReqIFLongName="Operational Needs for GNC during RPOD"
           ReqIFName="GNC Operational Needs (RPOD)" ReqIFPrefix="OA-N-">
         <ownedRequirements xsi:type="Requirements:Requirement" id="7931fc89-6739-48d9-b4ff-d71daa62668c"
-            ReqIFIdentifier="1" ReqIFLongName="Mission Control needs the Visiting Vehicle to remain in a safe condition, without loss of control and without unintended contact with the Target Spacecraft, from Rendezvous Start until docking is complete"
-            ReqIFName="OA-N-01" ReqIFPrefix="" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"/>
+            ReqIFName="OA-N-01" ReqIFPrefix="" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"
+            ReqIFText="Mission Control needs the Visiting Vehicle to remain in a safe condition, without loss of control and without unintended contact with the Target Spacecraft, from Rendezvous Start until docking is complete"/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="4615984b-60e1-4080-8027-24648afc0322"
-            ReqIFLongName="Mission Control needs the Visiting Vehicle’s approach path in every phase to stay within the operational and safety constraints defined for that phase, including the Keep-Out Sphere and the approach corridor, unless Mission Control has explicitly authorized otherwise"
-            ReqIFName="OA-N-02" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"/>
+            ReqIFName="OA-N-02" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"
+            ReqIFText="Mission Control needs the Visiting Vehicle’s approach path in every phase to stay within the operational and safety constraints defined for that phase, including the Keep-Out Sphere and the approach corridor, unless Mission Control has explicitly authorized otherwise"/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="a39aa84b-2a57-4518-85b6-ae0b28b566ad"
-            ReqIFLongName="Mission Control needs a trustworthy knowledge of the Visiting Vehicle’s position, velocity and attitude, and of its motion relative to the Target Spacecraft, together with an indication of how reliable that knowledge is, so that every approach decision can be made safely."
-            ReqIFName="OA-N-03" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"/>
+            ReqIFName="OA-N-03" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"
+            ReqIFText="Mission Control needs a trustworthy knowledge of the Visiting Vehicle’s position, velocity and attitude, and of its motion relative to the Target Spacecraft, together with an indication of how reliable that knowledge is, so that every approach decision can be made safely."/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="4ca51795-c498-4cfb-bc07-6b8aea6113e5"
-            ReqIFLongName="The Target Spacecraft needs its cooperative information (its state, its operational status, and its docking-port and approach-corridor information) to be made available to, and taken into account by, the Visiting Vehicle during the approach."
-            ReqIFName="OA-N-04" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"/>
+            ReqIFName="OA-N-04" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"
+            ReqIFText="The Target Spacecraft needs its cooperative information (its state, its operational status, and its docking-port and approach-corridor information) to be made available to, and taken into account by, the Visiting Vehicle during the approach."/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="b0e876f1-83c0-401e-b023-df9785bedc05"
-            ReqIFLongName="Mission Control needs each progression from one RPOD phase to the next to happen only when the conditions for entering that phase are met, and needs to be able to hold, resume or abort the approach at any tim"
-            ReqIFName="OA-N-05"/>
+            ReqIFName="OA-N-05" ReqIFText="Mission Control needs each progression from one RPOD phase to the next to happen only when the conditions for entering that phase are met, and needs to be able to hold, resume or abort the approach at any tim"/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="f07c7372-c8c1-4762-b91e-ba146c201c81"
-            ReqIFLongName="Mission Control needs the Visiting Vehicle to be able to leave the approach and return to a safe condition from any phase when an abnormal situation occurs."
-            ReqIFName="OA-N-06" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"/>
+            ReqIFName="OA-N-06" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"
+            ReqIFText="Mission Control needs the Visiting Vehicle to be able to leave the approach and return to a safe condition from any phase when an abnormal situation occurs."/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="d9424875-2bfc-4922-a853-1f9d415f2511"
-            ReqIFLongName="Mission Control needs the Visiting Vehicle to keep the approach safe when it loses contact with Mission Control or when its knowledge of the relative state degrades"
-            ReqIFName="OA-N-07"/>
+            ReqIFName="OA-N-07" ReqIFText="Mission Control needs the Visiting Vehicle to keep the approach safe when it loses contact with Mission Control or when its knowledge of the relative state degrades"/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="bf38c1ac-c65b-496f-8058-1b1e3b621fc8"
-            ReqIFLongName="Mission Control needs to be informed of the Visiting Vehicle’s status and of any abnormal condition it detects."
-            ReqIFName="OA-N-08" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"/>
+            ReqIFName="OA-N-08" requirementType="#ddb6f265-079b-45a9-9622-582b55bb14f7"
+            ReqIFText="Mission Control needs to be informed of the Visiting Vehicle’s status and of any abnormal condition it detects."/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="446c8b13-5e5b-4727-8f73-0be5bd38f06d"
-            ReqIFLongName="Mission Control needs the Visiting Vehicle to reach the docking interface with the alignment and closing conditions required by the Target Spacecraft."
-            ReqIFName="OA-N-09"/>
+            ReqIFName="OA-N-09" ReqIFText="Mission Control needs the Visiting Vehicle to reach the docking interface with the alignment and closing conditions required by the Target Spacecraft."/>
         <ownedRequirements xsi:type="Requirements:Requirement" id="56133e97-451c-446a-a092-0381d4988fc9"
-            ReqIFLongName="he Target Spacecraft needs to be protected from hazardous approach behaviour, i.e. the Visiting Vehicle must not enter the Target Spacecraft’s keep-out volume without authorization."
-            ReqIFName="OA-N-10"/>
+            ReqIFName="OA-N-10" ReqIFText="he Target Spacecraft needs to be protected from hazardous approach behaviour, i.e. the Visiting Vehicle must not enter the Target Spacecraft’s keep-out volume without authorization."/>
       </ownedExtensions>
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="9475a29c-b161-41d7-bd33-bf1347b98c91" name="Operational Activities">
@@ -189,19 +185,11 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="801e35e1-f8c7-4a1c-a7ac-f3d27fb2d2b9" name="Plan Reference">
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-                id="6c587a16-719a-46d4-ad1d-66d188c7d075" name="Update Target Reference Information"/>
-            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
                 id="b3a1562b-7bb8-4b56-ba62-f171b20673db" name="Generate Trajectory"/>
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
                 id="d9b11176-e897-40de-b66d-1a94ca47d589" name="Generate Rotational Reference"/>
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
                 id="5b29e9f9-33ba-4223-ab48-0401c7834a78" name="Determine Current Operational  Phase"/>
-            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="00574191-9a02-4c09-98cb-13b421950d08" name="Current Operational Phase"
-                target="#b3a1562b-7bb8-4b56-ba62-f171b20673db" source="#5b29e9f9-33ba-4223-ab48-0401c7834a78"/>
-            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="e4a28d66-6374-4dd6-aff6-497daf6961c4" name="Current Operational Phase"
-                target="#6c587a16-719a-46d4-ad1d-66d188c7d075" source="#5b29e9f9-33ba-4223-ab48-0401c7834a78"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="9ce6cc96-dbcb-4914-9fe6-49e8531e955b" name="Manage Off Nominal Condition">
@@ -240,6 +228,22 @@
                 id="5be61529-59d9-4f4b-baf3-4e5ac50ce08b" name="Actuator Performance Degradation Alert"
                 target="#01a21396-6ff1-42c7-b845-d58e477a9d15" source="#fee9e443-508f-475e-8ee2-937dbb662eb1"/>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="deb086e7-8381-403b-bac0-1b44ddda3baa" name="Provide Mission Plan"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="4da655ee-29e4-4dbc-b486-f564866f7e12" name="Monitor Mission Progress"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="ae92290a-16d4-43a1-bdf4-fb3f4ffaea41" name="Monitor Vehicle Health"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="55ecf05f-009b-4929-9b8f-734b39e16278" name="Update Mission Parameters"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="406bfe79-3446-43cc-9533-6e68118a4f87" name="Assess Off-Nominal Conditions"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="945d672b-f11e-40bd-b846-0617f6e83c4d" name="Provide Docking Interface Information"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="8acdadea-81c5-44b2-b547-41f466fe5cff" name="Report Target Operational Status"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="f138ed3e-a009-4948-8984-9836403e6832" name="Provide Target State Information"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="f141e34e-3e2b-4bb7-9f5e-c3ef377fd46e" name="Relative State Vector"
               target="#5b29e9f9-33ba-4223-ab48-0401c7834a78" source="#e79a6d15-bc80-4727-a101-729308dc8795"/>
@@ -267,6 +271,45 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="6ccb3201-b2bf-48f9-abe5-9ddcf607dd04" name="Off Nominal Allocation Restrictions"
               target="#8b3f4e8e-1d23-4e01-9b5b-ef09e8fa6902" source="#5352f8cb-3340-4d79-930f-df887dc4bddf"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7c0388cf-9407-425e-8234-d0a80ce6eb1b" name="Rotational Objective"
+              target="#d9b11176-e897-40de-b66d-1a94ca47d589" source="#d8b480b6-a58c-49b0-b894-ed6545e914b2"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="edbf8e04-5969-4ce4-8f4e-40a606535393" name="Translational Obejctive"
+              target="#b3a1562b-7bb8-4b56-ba62-f171b20673db" source="#d8b480b6-a58c-49b0-b894-ed6545e914b2"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="00574191-9a02-4c09-98cb-13b421950d08" name="Current Operational Phase"
+              target="#d8b480b6-a58c-49b0-b894-ed6545e914b2" source="#5b29e9f9-33ba-4223-ab48-0401c7834a78"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="2dc51651-8458-40b1-b462-e798a2d63502" name="Mission Status" target="#01a21396-6ff1-42c7-b845-d58e477a9d15"
+              source="#4da655ee-29e4-4dbc-b486-f564866f7e12"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="79c9da08-1ed5-4b82-b56a-053a015f4b58" name="Vehicle Health Status"
+              target="#01a21396-6ff1-42c7-b845-d58e477a9d15" source="#ae92290a-16d4-43a1-bdf4-fb3f4ffaea41"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a0b50f8a-bd1c-48bc-929e-28ea5404cac9" name="Off nominal Condition Notification"
+              target="#e9fd20fd-f9cd-4e03-a0ca-8be0ac11d897" source="#406bfe79-3446-43cc-9533-6e68118a4f87"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="36619fc8-dde9-4392-a26b-34570e590d12" name="Mission Parameters &amp; Constrains"
+              target="#d8b480b6-a58c-49b0-b894-ed6545e914b2" source="#55ecf05f-009b-4929-9b8f-734b39e16278"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="30b48992-21fa-4d56-bc6b-8f8bbc3e728d" name="Mission Plan Parameters"
+              target="#d8b480b6-a58c-49b0-b894-ed6545e914b2" source="#deb086e7-8381-403b-bac0-1b44ddda3baa"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="e9fb8796-fb50-468f-9634-e12913bc34c2" name="Target Status" target="#406bfe79-3446-43cc-9533-6e68118a4f87"
+              source="#8acdadea-81c5-44b2-b547-41f466fe5cff"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="20176e00-988b-481c-880d-de6a0220ffcc" name="Vehicle Health Status"
+              target="#406bfe79-3446-43cc-9533-6e68118a4f87" source="#ae92290a-16d4-43a1-bdf4-fb3f4ffaea41"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="e02f1cd8-50ec-4353-a771-679af368e8c2" name="Mission Status" target="#406bfe79-3446-43cc-9533-6e68118a4f87"
+              source="#4da655ee-29e4-4dbc-b486-f564866f7e12"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="d04cedd0-9320-46bf-bc8a-e32d472f10bf" name="Target Information"
+              target="#4da655ee-29e4-4dbc-b486-f564866f7e12" source="#f138ed3e-a009-4948-8984-9836403e6832"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="5aafae08-fbea-4ead-95f1-65f1df61f4ac" name="Docking Port Standard"
+              target="#deb086e7-8381-403b-bac0-1b44ddda3baa" source="#945d672b-f11e-40bd-b846-0617f6e83c4d"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -351,8 +394,6 @@
               id="59ac7d00-a408-419f-8174-e14965606f33" involved="#5352f8cb-3340-4d79-930f-df887dc4bddf"/>
           <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
               id="95d9caf8-b7d6-4480-9ccf-59537b7cd76d" involved="#8b3f4e8e-1d23-4e01-9b5b-ef09e8fa6902"/>
-          <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
-              id="32d21cd8-808f-4765-bdd2-0c3d18062f5e" involved="#6c587a16-719a-46d4-ad1d-66d188c7d075"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="dfad198a-1421-4280-9318-e744127ccf38" name="Perform Close-range Rendezvous">
@@ -452,7 +493,23 @@
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="89110467-2242-4fbf-8906-f8629e05bc89"
               name="Ground Communication Facilities"/>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4bc7b9c7-de68-4d1a-8ed2-2c2c1823dfc2"
-              name="Mission Control Center" description="&lt;p>Authorizes phases, provides constraints and ground tracking, monitors status, commands hold or abort.&lt;/p>&#xA;"/>
+              name="Mission Control Center" description="&lt;p>Authorizes phases, provides constraints and ground tracking, monitors status, commands hold or abort.&lt;/p>&#xA;">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="19d15b74-d3f0-4724-a4bd-2121747e7a31" targetElement="#deb086e7-8381-403b-bac0-1b44ddda3baa"
+                sourceElement="#4bc7b9c7-de68-4d1a-8ed2-2c2c1823dfc2"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="af9d8a26-e083-4524-9aa9-0e8ef3711e5a" targetElement="#4da655ee-29e4-4dbc-b486-f564866f7e12"
+                sourceElement="#4bc7b9c7-de68-4d1a-8ed2-2c2c1823dfc2"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="94a134aa-3e93-443e-a4f4-738c8b0e30fc" targetElement="#ae92290a-16d4-43a1-bdf4-fb3f4ffaea41"
+                sourceElement="#4bc7b9c7-de68-4d1a-8ed2-2c2c1823dfc2"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="4b0aeae3-7fd7-46fa-b032-5e82480de69d" targetElement="#55ecf05f-009b-4929-9b8f-734b39e16278"
+                sourceElement="#4bc7b9c7-de68-4d1a-8ed2-2c2c1823dfc2"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="112d6dd1-d5e6-4529-b634-cb44a9642174" targetElement="#406bfe79-3446-43cc-9533-6e68118a4f87"
+                sourceElement="#4bc7b9c7-de68-4d1a-8ed2-2c2c1823dfc2"/>
+          </ownedEntities>
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="61135073-0508-430f-9498-f31a441666a6"
             name="Space Segment">
@@ -463,7 +520,17 @@
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="8047ae00-56d4-4e7d-be1f-475c3291a607"
               name="Communication Satellite Relays" abstractType="#ef287ebe-6279-459a-a9b5-f1a737c597ea"/>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="e5234b99-ac45-4735-8153-99bf2200388d"
-              name="Target Spacecraft" description="&lt;p>Cooperative spacecraft in NRHO; provides state, status and docking information.&lt;/p>&#xA;"/>
+              name="Target Spacecraft" description="&lt;p>Cooperative spacecraft in NRHO; provides state, status and docking information.&lt;/p>&#xA;">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="93fa4e09-7f4c-4e9a-b5b6-3ff37437ca85" targetElement="#945d672b-f11e-40bd-b846-0617f6e83c4d"
+                sourceElement="#e5234b99-ac45-4735-8153-99bf2200388d"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="00ee23b3-7575-4cf1-84b9-5c576dec3d8f" targetElement="#8acdadea-81c5-44b2-b547-41f466fe5cff"
+                sourceElement="#e5234b99-ac45-4735-8153-99bf2200388d"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="ca65fc0d-55a3-4f82-96d6-75837832d31a" targetElement="#f138ed3e-a009-4948-8984-9836403e6832"
+                sourceElement="#e5234b99-ac45-4735-8153-99bf2200388d"/>
+          </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="6836fc53-3e71-40ff-bc74-d2c68e8d0e70"
               name="Visiting Vehicle">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
@@ -501,9 +568,6 @@
                 sourceElement="#6836fc53-3e71-40ff-bc74-d2c68e8d0e70"/>
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="cd9699b1-0cf1-4051-8a52-cdcfb297cecf" targetElement="#fee9e443-508f-475e-8ee2-937dbb662eb1"
-                sourceElement="#6836fc53-3e71-40ff-bc74-d2c68e8d0e70"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="5b4d6ff8-20d1-4393-a1d5-97f2786eb136" targetElement="#6c587a16-719a-46d4-ad1d-66d188c7d075"
                 sourceElement="#6836fc53-3e71-40ff-bc74-d2c68e8d0e70"/>
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="192cf3e7-516e-42cf-9a4a-f3e6f55ee063" targetElement="#b3a1562b-7bb8-4b56-ba62-f171b20673db"
