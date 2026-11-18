@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Capella_Version_7.1.0-->
+<org.polarsys.capella.core.data.capellamodeller:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CapellaRequirements="http://www.polarsys.org/capella/requirements"
+    xmlns:Requirements="http://www.polarsys.org/kitalpha/requirements" xmlns:libraries="http://www.polarsys.org/capella/common/libraries/7.0.0"
+    xmlns:org.polarsys.capella.core.data.capellacommon="http://www.polarsys.org/capella/core/common/7.0.0"
+    xmlns:org.polarsys.capella.core.data.capellacore="http://www.polarsys.org/capella/core/core/7.0.0"
+    xmlns:org.polarsys.capella.core.data.capellamodeller="http://www.polarsys.org/capella/core/modeller/7.0.0"
+    xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/7.0.0"
+    xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/7.0.0"
+    xmlns:org.polarsys.capella.core.data.epbs="http://www.polarsys.org/capella/core/epbs/7.0.0"
+    xmlns:org.polarsys.capella.core.data.fa="http://www.polarsys.org/capella/core/fa/7.0.0"
+    xmlns:org.polarsys.capella.core.data.information="http://www.polarsys.org/capella/core/information/7.0.0"
+    xmlns:org.polarsys.capella.core.data.information.datatype="http://www.polarsys.org/capella/core/information/datatype/7.0.0"
+    xmlns:org.polarsys.capella.core.data.information.datavalue="http://www.polarsys.org/capella/core/information/datavalue/7.0.0"
+    xmlns:org.polarsys.capella.core.data.interaction="http://www.polarsys.org/capella/core/interaction/7.0.0"
+    xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/7.0.0"
+    xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/7.0.0"
+    xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/7.0.0"
+    id="f0c401e7-7010-461a-9ba0-4db66a8e8472"
+    name="GNC_for_RPOD">
+  <ownedExtensions xsi:type="libraries:ModelInformation" id="e3247fbe-2a32-4a27-acd1-4f854472d850"/>
+  <ownedEnumerationPropertyTypes xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyType"
+      id="22c04ad7-de6b-4d0b-ac9a-476685fa0b43" name="ProgressStatus">
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="05c2da84-1102-4bbb-bf74-0b33d6b91837" name="DRAFT"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="1f6b7c77-561e-49d4-b3d5-581d0f865ee1" name="TO_BE_REVIEWED"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="69c17abf-42bf-4287-bc1e-776f3b234821" name="TO_BE_DISCUSSED"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="93f84bee-c332-475a-9fdb-f5c05b18a17f" name="REWORK_NECESSARY"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="408e1061-05f8-4758-9164-c88c239b6ab4" name="UNDER_REWORK"/>
+    <ownedLiterals xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyLiteral"
+        id="4b00c509-427d-43c0-adfd-676803e2bb43" name="REVIEWED_OK"/>
+  </ownedEnumerationPropertyTypes>
+  <keyValuePairs xsi:type="org.polarsys.capella.core.data.capellacore:KeyValue" id="725a80a0-6dd0-4eea-ba58-cd40b6fcc0d4"
+      key="projectApproach" value="SingletonComponents"/>
+  <ownedModelRoots xsi:type="org.polarsys.capella.core.data.capellamodeller:SystemEngineering"
+      id="0726407b-bb73-4c28-98b3-e880c09334be" name="GNC_for_RPOD">
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.oa:OperationalAnalysis"
+        id="c5a3e878-b117-4f32-8226-b4b63cbb5e0f" name="Operational Analysis">
+      <ownedExtensions xsi:type="CapellaRequirements:CapellaModule" id="e2997f3f-fc21-4cec-bfc1-4429dc15442b"
+          ReqIFLongName="Operational Needs">
+        <ownedRequirements xsi:type="Requirements:Requirement" id="1daae4b4-ece5-45a6-bab0-0ae844ec7ad7"
+            ReqIFLongName="Overall RPOD Operational Safety" ReqIFName="OA-N-01" ReqIFText="&lt;p>Mission Control needs the Visiting Vehicle to maintain a safe operational condition throughout RPOD operations, from Rendezvous Start until docking completion, preventing loss of vehicle control, unintended contact with the Target Spacecraft, and other hazardous interactions.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="3dc452d5-4a24-442b-b5e5-7d14e28a0473"
+            ReqIFLongName="Trajectory and Approach Constraint Compliance" ReqIFName="OA-N-02"
+            ReqIFText="&lt;p>Mission Control needs the Visiting Vehicle&amp;#39;s trajectory and approach behavior to remain within the operational and safety constraints applicable to each RPOD phase, including the Keep-Out Sphere and designated approach corridors, unless an authorized operational exception applies.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="b0a435ea-464e-4547-b7c3-cfc7778021a1"
+            ReqIFLongName="Navigation State Knowledge and Integrity" ReqIFName="OA-N-03"
+            ReqIFText="&lt;p>Mission Control needs reliable knowledge of the Visiting Vehicle&amp;#39;s absolute position, velocity and attitude, as well as its relative position, velocity and attitude with respect to the Target Spacecraft, together with an indication of the validity and integrity of the navigation information.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="bd9be350-bd45-420f-84b8-da7c35d3fcf5"
+            ReqIFLongName="Target Cooperative Information Availability" ReqIFName="OA-N-04"
+            ReqIFText="&lt;p>The Target Spacecraft needs its relevant cooperative information, including its state, operational status, docking interface characteristics and approach corridor information, to be made available to and considered by the Visiting Vehicle during RPOD operations.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="f05a3482-ce78-40b9-b076-288328321fde"
+            ReqIFLongName="RPOD Phase Progression Control" ReqIFName="OA-N-05" ReqIFText="&lt;p>Mission Control needs each transition between RPOD operational phases to occur only when the applicable entry conditions and safety criteria have been satisfied.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="8325ee0d-5147-46a3-a36d-c7bebde439c5"
+            ReqIFLongName="Mission Control Operational Authority" ReqIFName="OA-N-06"
+            ReqIFText="&lt;p>Mission Control needs to retain the authority to hold, resume or abort RPOD operations and to authorize the execution of applicable maneuvers throughout the mission.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="eba59f88-1459-4308-8ba6-01eb6737eb89"
+            ReqIFLongName="Off-Nominal Response and Safe Recovery" ReqIFName="OA-N-07"
+            ReqIFText="&lt;p>Mission Control needs the Visiting Vehicle to detect and respond to off-nominal conditions by executing appropriate contingency actions, including abort, retreat, collision avoidance or safe-hold operations, as applicable, to recover or maintain a safe operational condition.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="a9401790-76a0-4a5c-8fd6-cd709ff36530"
+            ReqIFLongName="Autonomous Safety During Communication Loss" ReqIFName="OA-N-08"
+            ReqIFText="&lt;p>Mission Control needs the Visiting Vehicle to maintain a safe operational condition autonomously when communication with Mission Control is lost, without relying on the reception of additional ground directives.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="314eb47a-db63-4643-8f82-23e35a4501e7"
+            ReqIFLongName="Mission Status and Anomaly Reporting" ReqIFName="OA-N-09"
+            ReqIFText="&lt;p>Mission Control needs to receive timely and relevant information regarding the Visiting Vehicle&amp;#39;s operational status, navigation and GNC performance, maneuver execution and detected off-nominal conditions throughout RPOD operations.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="c12edd19-a926-41aa-9fb1-0e9f5e9bd155"
+            ReqIFLongName="Docking Interface Acquisition Conditions" ReqIFName="OA-N-10"
+            ReqIFText="&lt;p>Mission Control needs the Visiting Vehicle to reach and engage the Target Spacecraft&amp;#39;s docking interface under the required relative position, velocity, attitude and alignment conditions established for successful docking.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="d785204c-0c0e-4c2d-b714-26a074f43e29"
+            ReqIFLongName="Target Spacecraft Protection" ReqIFName="OA-N-11" ReqIFText="&lt;p>The Target Spacecraft needs protection from hazardous approach behavior by the Visiting Vehicle, including unauthorized entry into its Keep-Out Sphere and approach trajectories that could result in unintended contact or collision.&lt;/p>&#xA;"/>
+        <ownedRequirements xsi:type="Requirements:Requirement" id="988010d5-5186-4880-8860-27c7cea9b643"
+            ReqIFLongName="Mission Communication and Command Exchange" ReqIFName="OA-N-12"
+            ReqIFText="&lt;p>Mission Control needs to exchange operational commands, directives and vehicle telemetry with the Visiting Vehicle through the available communication infrastructure to support the monitoring, coordination and control of RPOD operations.&lt;/p>&#xA;"/>
+      </ownedExtensions>
+      <ownedExtensions xsi:type="CapellaRequirements:CapellaTypesFolder" id="aecdfd27-5ac1-4c5d-af08-dd8816b7f12a"
+          ReqIFLongName="Need Types">
+        <ownedTypes xsi:type="Requirements:RelationType" id="a4507a5e-d96d-4fa9-a0bf-c04152b36a87"
+            ReqIFLongName="Operational Need"/>
+      </ownedExtensions>
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
+          id="f534deb7-70e7-4444-9536-11fa69289719" name="Operational Activities">
+        <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+            id="6490eda9-1fbf-4242-9ea5-e861383af7b6" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="c544127a-dc03-4b08-a840-c5f3f8f99522" name="Coordinate RPOD Mission Operation">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8a91e899-6e1e-4f5e-a92f-718a63734d8a" name="Establish RPOD Operational Objectives and Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7b4a6281-75fc-4be9-bf87-785d09543782" name="Assess Overall Mission Readiness."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="367ddcee-f0b6-47dc-9ab9-3df6d003fe89" name="Coordinate RPOD Mission Operations."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c6a39c55-ff8f-40db-a445-68dd8b993d51" name="Coordinate Mission-Level Operational Decisions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="ce353b77-0ecc-4765-8697-d0fc92459ba4" name="Assess Operational Status and Mission Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c1f910a0-a3bb-43d2-af5b-033de561e56a" name="Monitor Overall Mission Progress."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="19714a6c-cc9c-458f-936f-5d8f6087f248" name="Manage RPOD Mission Phases">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="d636b143-a7c9-4672-a364-c19aa652c6af" name="Determine Current RPOD Operational Phase."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="acbdd766-7447-4e3e-8d8d-a4723792a4b0" name="Assess Phase Entry and Exit Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="e626bbeb-65e1-4647-93dc-5e6ecf34edc1" name="Evaluate RPOD Phase Transition Readiness."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="d2aa7216-47c4-4830-ae66-28f54a6ec461" name="Authorize RPOD Phase Transitions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8c24716b-d2e7-4361-a8a5-785c33074263" name="Coordinate Operational Phase Transitions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c760cd3d-eef4-433f-994e-d0ead1c4d12a" name="Make RPOD Phase Go/No-Go Decisions."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="21eb8c0b-d85f-43be-b23a-2de6606a51c2" name="Manage Operational Commands and Directives">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="e55e3532-f6cd-4158-bea4-00dd2182a716" name="Maintain Operational Command Validity."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="fa165f6e-70d5-4fde-8c58-4a3f5417a01d" name="Transmit Operational Commands and Directives."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="1e42c350-79d8-4ef3-8981-7dc38e93570a" name="Authorize Maneuver Execution."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="9c05bbf8-b278-4c1d-99f6-261595c84a6f" name="Validate Operational Commands and Directives."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="875deb70-d85e-424c-af62-4540f914ba3a" name="Formulate Operational Commands and Directives."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="67370ff5-ada2-4dbf-9fa4-ce06ec821363" name="Monitor Command Delivery and Acknowledgment."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="1ce50604-f5fd-4963-b34d-d7aa18881e53" name="Manage Operational Data Reception and Processing">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="9dbec118-a6ea-4dee-a81e-3f98f9f72dd4" name="Receive External Navigation and Mission Data."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="88fe63a2-ed4e-4740-a107-1000cb6cf8bb" name="Receive Onboard Sensor and Vehicle Data."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="1b0dd14e-86f0-4234-b301-88730d9f612c" name="Receive Target Cooperative Information."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a223b82b-2f00-4196-8c3e-06d4402859b0" name="Receive Ground Directives and Operational Updates."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="e169e23f-c58e-4661-9e77-479b15312906" name="Validate Received Operational Data."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c0bf2f94-bbcf-4509-987d-11031cfe6272" name="Preprocess and Integrate Operational Data."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="41ba0946-f1d1-4c9f-a962-64061f66cc69" name="Maintain Operational Data Consistency."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c5077ec9-4814-4dd5-9673-30426b13af62" name="Distribute Onboard Processed Operational Information."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="457e191d-6cb7-4bed-be56-a06143d8333a" name="Acknowledge Operational Commands."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="cfdeb57b-de4b-4afd-b1c0-64c30bd12133" name="Determine Navigation State and Integrity">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="da712d7c-5ec2-4732-a1c5-5c8881cfb61d" name="Determine Relative Navigation State with Respect to Target."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b75929f5-1b89-4297-97d4-5720a9cc544f" name="Assess Navigation Data Validity."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8f9bf561-798b-4ae0-af21-416d1d6f31f1" name="Monitor Navigation State Consistency."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="9d02b04d-7017-4640-b05b-1d473e5bb816" name="Assess Navigation Integrity."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="5810522b-0264-4345-8879-7b5445cfd970" name="Report Navigation State and Integrity Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7b9cb49b-0842-4586-8bc3-249b96f0070f" name="Detect Navigation Degradation or Loss of Validity."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4c3ef511-392c-401e-8026-578d319c28eb" name="Determine Visiting Vehicle Absolute Navigation State."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="470a08c5-e5b1-464f-b3ed-ef4d20b3d695" name="Provide Cooperative Target Information">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="710172cd-b522-4e32-9cc0-0aebe157af55" name="Provide Target Absolute State Information."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b4157890-824b-4df1-ad91-1e7cb1716cf2" name="Provide Target Operational Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4772161f-d229-457f-9508-ee4c786d8356" name="Provide Docking Interface Characteristics."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="871f5785-fede-4875-bf2a-8a8f0ef9d877" name="Provide Designated Approach Corridor Information."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7dbbc31c-8b2b-4f50-9e51-dda635ea0520" name="Maintain Availability of Cooperative Target Information."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="095522d7-d3ce-493c-9e4c-d4646bd13181" name="Report Target Information Availability and Validity."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="a602edde-21ec-48c4-8f8e-bcae647680b9" name="Maintain Passive Safety">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="1613a558-d56a-4cb7-8362-a7a76c7e11f7" name="Establish Passive-Safe Operational Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4c3f64fd-d9b7-414c-9f9c-28868d491415" name="Monitor Separation from Target Spacecraft."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="9b4bb800-4e38-4c3d-af09-cc44e0efc4df" name="Monitor Keep-Out Sphere Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7e1565e8-f9e8-4f9c-a06b-e3ced07d86c4" name="Monitor Approach Corridor Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8d6aa39c-09d9-4174-9e9c-b89c43a670c4" name="Assess Passive Trajectory Safety."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="02d6222b-e208-41bc-b868-077790d92852" name="Maintain Passive-Safe Trajectory Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="d1a2fecd-5d2e-4b6b-8ab8-70a76009493a" name="Report Passive Safety Status."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="cc7780d8-dca4-4e35-8030-a02ee57f4950" name="Plan RPOD Trajectories and Guidance">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="41cb47d4-d50a-488f-884b-b9dc7e3245a4" name="Determine Onboard Maneuver Objectives."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b839d1d4-3fce-4664-9f06-1d52a58c88e7" name="Generate Onboard RPOD Trajectory."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="2da358e4-fca6-417f-9b32-a364d7f1d957" name="Update and Replan RPOD Trajectories."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8f1ca095-5d90-4cd1-a6a4-5990bce373a7" name="Generate Guidance References."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="bb59f6f1-12c9-4732-9275-1397e440d3d1" name="Assess Trajectory and Approach Safety."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="cf3034b4-b6d3-4866-ae59-60de83750a27" name="Verify Compliance with Operational Trajectory Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="cba73635-be49-42e8-9eca-71d197ade317" name="Provide Trajectory and Guidance Information."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="b79af045-5337-4de4-ba03-f32c747d49b0" name="Execute RPOD Maneuvers">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7ca48e5f-b748-4c80-9b38-1441f15e6a77" name="Prepare Authorized RPOD Maneuvers."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="1b02e346-cf40-47ee-9bdf-a7fd76e03009" name="Execute Translational Maneuvers."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="50f9940f-0cd5-482c-a563-a8aac405bfdb" name="Execute Attitude Maneuvers."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="baf41cc3-b713-42db-a1ce-8ccedf7b418a" name="Maintain Required Vehicle Motion."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="6abdc6e7-670b-4cc0-82ae-bd330ee6d13e" name="Monitor Maneuver Execution."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="0f281e72-5b0d-4358-a5cc-8d59843b8d60" name="Assess Maneuver Completion."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="50d7c49b-b31b-4d8a-aeab-807bbfc0db97" name="Report Maneuver Execution Status."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="144a61c3-d2e8-4d0d-8897-183458c6408b" name="Manage Onboard RPOD Operation">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="9c3e17f5-e853-42ec-8a46-16936059de00" name="Monitor Current RPOD Operational Phase."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="84d16c3d-da7b-4691-acb1-0b136d4b2977" name="Assess Onboard Phase Transition Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="fe48887f-2f2a-47e3-b600-31353012379f" name="Maintain Phase-Dependent Operational Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="1f59a002-9bd9-41cd-99ec-16bda2b0ff3d" name="Coordinate Onboard RPOD Operations."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a9f81254-dd71-487e-939c-ad82a092084f" name="Monitor Overall Onboard Mission Progress."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="43941471-b031-40ed-8780-324791262242" name="Determine Onboard current RPOD Operational Phase"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="f6c77278-16ea-449d-acb1-ca61d153424b" name="Assess Navigation State and Integrity">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c49686eb-79e3-47ec-8d14-00e0965dd28a" name="Receive Visiting Vehicle Navigation Information."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="06436110-c490-4ada-8dad-b7d3abf99533" name="Assess Visiting Vehicle Navigation Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="49157ee0-77f6-46f3-89c6-974592d421f8" name="Assess Relative Navigation Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8e0df302-d167-4038-87ee-c6351b56d379" name="Independently Assess Navigation Data Validity."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="44661e18-517d-4720-876f-cac222435a49" name="Evaluate Navigation Integrity."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4a209fac-7b84-4e18-98f4-bff1ab87550d" name="Report Navigation Assessment Results."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4c83b8af-4b8c-4720-9e4b-fc633b4ebb01" name="Detect Reported Navigation Degradation."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="479234b9-9466-4c16-aa49-06842625a74a" name="Manage Mission Trajectory Planning and Assessment">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4f73406c-8feb-46cb-b23c-c69a517e4c58" name="Determine Mission-Level Maneuver Objectives."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="dce59fe9-f0bc-4cbd-9e65-c0613dc287e3" name="Assess Trajectory and Approach Safety."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="78ae78b7-9f2d-4813-884f-b9fa2a3936aa" name="Verify Compliance with Operational Trajectory Constraints."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="6db1fa87-feb2-47c2-a5f4-aee3553d4ad0" name="Assess Passive Trajectory Safety."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="0d8f856e-1474-4349-b7d0-a871b8e91dae" name="Provide Trajectory and Guidance Information to VV."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="08ca11e7-9a03-495f-9591-f8c68b34c3a5" name="Monitor Onboard Vehicle and GNC Status">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="475cccdd-3df3-40e8-b9bf-f06328aad34c" name="Monitor Onboard Navigation Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3135a1a1-82c1-41f3-9bdd-e57b4e920b67" name="Monitor Onboard Guidance Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="243a8c85-b6d6-40e2-95e2-e02a83cea52b" name="Monitor Onboard Control Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="22f19a66-3631-4988-bc83-d09dadd21139" name="Monitor Propulsion and Actuation Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="2ef9c596-3fcb-4952-ac9a-8ad897041c62" name="Monitor Mechanical and Electrical Power Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="58abefe1-4cc3-4893-ad90-f0f0a3abcf3e" name="Monitor Onboard Vehicle Health."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="52c1129d-a4f7-439c-b44c-57cc21bb439c" name="Detect Vehicle and GNC Performance Deviations."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c553bf0c-6127-4133-a60f-c39251b4291f" name="Report Onboard Vehicle Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a25c61f5-1925-4298-8bd8-35ec117ca120" name="Report Onboard GNC Status."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="5c27812d-db98-446c-ad05-5554e7bfc093" name="Monitor Vehicle and GNC Performance from Ground">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="37991b78-3e14-4d24-af54-2848a46732d0" name="Monitor Reported Vehicle Health."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a7463954-f85d-404d-81a6-4b8197dfeedb" name="Monitor Reported Navigation Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="02317e89-7de8-4eef-b385-095c4d24c976" name="Monitor Reported Guidance and Control Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="09afbc25-9a5f-4373-b4c7-155246370e91" name="Monitor Reported Maneuver Execution."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="dee6ddb3-0364-49a8-bb55-2e1c8fd46210" name="Monitor Mechanical and Electrical Power Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="92d9415f-0ab2-4399-afc8-d157c66ba928" name="Assess Reported Vehicle Operational Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7c79ea98-c5f9-4025-b6cf-853d65e681cf" name="Identify Vehicle and GNC Performance Deviations."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="d0018dfc-65f7-4ca9-ab76-c85330760839" name="Monitor RPOD Operational Safety">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="dd44096e-69f7-447e-bad5-977b225fc059" name="Monitor Reported Separation from Target."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3ae2663d-79c5-40d5-b1ca-caa952f46d5e" name="Monitor Keep-Out Sphere Compliance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="948b110d-a635-4f0e-a5c6-c0d40d8ba297" name="Monitor Approach Corridor Compliance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="41a7e95c-6fb2-45c1-8239-2f870181d9c6" name="Assess Reported Passive Safety Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="146f62f8-bf6b-4dbc-808b-84a068c69784" name="Assess Operational Trajectory Safety."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3c6969b6-0584-4ad6-981c-bb4d08c385cf" name="Identify Potential Target Collision Hazards."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a3bbeaea-330f-4118-96c3-0ff8a5162537" name="Report RPOD Safety Assessment Results."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="0a73be34-344f-4da4-904b-2c287a01f65d" name="Conduct Docking Operations">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3777ce63-7e44-4d7b-871f-5389bcd0646d" name="Establish Docking Readiness."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8bc523e0-5cee-4b5d-a59e-a1e78e2d9b9d" name="Transition to Docking Axis."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="4ccf14f9-ed4b-40aa-92e2-441605b44344" name="Align Visiting Vehicle with Docking Interface."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="0eb51b67-a13d-4229-ba77-138c6ff397bc" name="Execute Capture and Mechanical Mating."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="74793665-d93f-4b04-8ea4-31d55e564860" name="Verify Docking and Capture Completion."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b25590d0-41ec-4386-9e4c-5fe895c2f969" name="Report Docking Operational Status."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="147bb623-d72d-44f4-a636-7b120327aeb7" name="Detect and Assess Onboard Off-Nominal Conditions">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="82fc1677-eab2-4849-b9ad-dd7ad81fad9f" name="Detect Off-Nominal Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="61aed8e7-d306-4e25-aa8e-c2edc158d520" name="Assess Off-Nominal Severity and Operational Impact."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b9ed8ca7-77bd-4d1e-ac22-e122a7b9780f" name="Determine Required Onboard Safety Response."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b954d6ec-c59d-49cc-9dbf-328e2cffd467" name="Report Detected Off-Nominal Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a8e1ba28-3498-406a-ba24-62ebd5b4690d" name="Monitor Onboard Contingency Conditions."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="6075e392-13d7-410d-9aac-181e5fa73cee" name="Manage RPOD Off-Nominal Conditions">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3e2d85c2-f679-42e6-b5c5-2af62551d793" name="Receive Off-Nominal Condition Reports."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="50a25262-5764-4748-aec7-be2844b50385" name="Assess Off-Nominal Severity and Mission Impact."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="1f8e3c43-1ee4-4aca-ae8d-d7a9b4a4a3c3" name="Determine Required Contingency Response."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="93a6ae5a-1205-4cb9-b66b-7ec60fb46bf4" name="Coordinate Contingency Response."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3966250d-61d8-474e-9a3e-dc95a7403b97" name="Evaluate Contingency Execution Status."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="86bd7e3f-331b-4dd0-9d44-052c3650536c" name="Assess Conditions for Return to Nominal Operations."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="d22b100d-d727-4fa2-8889-d5e5c8706a8c" name="Supervise Docking Operations">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="08f35bac-ce16-451e-8d79-2add15352568" name="Assess Docking Readiness."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8caa4bce-2ea7-42c3-af74-bd028797ff47" name="Verify Docking Entry Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8377becd-2211-4283-ada9-c0db3e336763" name="Monitor Capture and Mechanical Mating."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8cdf2d8d-7a1d-4e40-b8e4-b292f289ceb8" name="Monitor Final Docking Approach."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="1c34941a-d1a6-49bf-b420-6d446493f17f" name="Maintain Autonomous Safety During Communication Loss">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c9e28b4e-3c11-42d3-9384-47c51272dc31" name="Detect Communication Loss."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="18bde109-dbbe-48f8-83a5-9a92db7411ff" name="Assess Communication Availability and Degradation."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="724d1af4-56d2-4a5f-9f38-533156067a14" name="Determine Applicable Autonomous Safety Response."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c221ae15-31cc-43b4-b2c9-187b91c02dd9" name="Execute Preauthorized Autonomous Safety Actions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="b2a034f8-4197-4af8-bbfe-adaf86d2c1e1" name="Maintain Autonomous Safe Operational Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="93b89a38-50fa-4ba9-b1e8-8e284603563a" name="Monitor Communication Recovery."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="52ad88c2-ac6b-467a-bcc9-e08668df3c11" name="Execute Safety and Recovery Operations">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7c8789ef-5874-4c16-b5d9-d580ddc7a27c" name="Execute Collision Avoidance Maneuvers."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="d1537ddd-924a-4286-b143-2fc611fb6539" name="Execute Abort Maneuvers."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="a8b32b28-0d71-4ab6-81c2-6da8f9d36cf0" name="Enter Safe-Hold."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="da877a78-c11c-423d-908e-b445c2d63e08" name="Maintain Safe-Hold Conditions."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c6501c92-7de2-42cb-84d4-af3593f86167" name="Assess Safe Recovery Conditions."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="df606b37-f296-4ac4-99e9-1254ae2c9fc7" name="Manage Mission Communication and Telemetry">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="df57bb56-02c7-43fa-a9ab-a96c838c2cd3" name="Monitor Space-to-Ground Communication Availability."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="0219a35a-5d0b-410d-b99d-776bc731acce" name="Monitor Received Vehicle Telemetry."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="308493c5-7c65-45a5-91c0-571612c89195" name="Assess Communication Link Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="8071da96-8d70-484f-9205-8771ab1c1d56" name="Detect Communication Degradation."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="cfe6e8f7-0e98-4fee-946f-6126cd94b7c5" name="Coordinate Communication Recovery."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="f05f2566-7830-40a9-80e8-67906bd3d0c2" name="Provide Ground Communication Services">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="ab539a22-51d3-4a25-ac49-1c7973229c3c" name="Receive Space-to-Ground Communication Signals."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="46c84e88-5562-49c2-8a6f-1eef21a01a7f" name="Deliver Vehicle Telemetry to Mission Control."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="697d22ce-04e5-4d8d-8c0f-2d4420f50aa4" name="Transmit Ground Commands to Space Segment."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="ac4bb225-d166-4585-b487-0dadc7ff82b2" name="Maintain Ground Communication Availability."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3e4740d4-ab0c-47d7-9a3f-13a20b71f153" name="Monitor Ground Communication Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="0c140528-9ed0-4bee-9f74-cca9d97797d1" name="Report Ground Communication Degradation."/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="19f03b89-b8fe-4f6c-85bc-0270abf3cb25" name="Provide Space Communication Relay Services">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="6ec48ceb-71d4-46c2-b1d9-120a4f63fdbb" name="Receive Space Communication Signals."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="2098d847-0657-4e94-b2b4-b31af0b3667c" name="Relay Vehicle Telemetry to Ground Segment."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c7c5db4c-91a1-4fa8-927e-c69811301726" name="Relay Ground Commands to Visiting Vehicle."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="3195b87f-f2fb-4cab-b02e-36eea8ce46c7" name="Monitor Communication Relay Performance."/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="d4e19b34-7803-4ad5-a617-09672d518121" name="Report Communication Relay Degradation."/>
+          </ownedFunctions>
+        </ownedOperationalActivities>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
+          id="53605ded-5c8b-4c21-ba61-02a4d78d489f" name="Operational Capabilities">
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="2a13beda-dc16-4be6-b649-06466a8acd9b" name="Conduct Cislunar RPOD Mission"
+            description="&lt;p>Ability to conduct the complete rendezvous, proximity operations, and docking mission between the Visiting Vehicle and the Target Vehicle in the cislunar environment.&lt;/p>&#xA;">
+          <extends xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityExtend"
+              id="1e7ae620-b153-488e-9179-e8c5308876f3" extended="#2410ad10-a951-40cf-9892-0df50e23653b"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="1396b963-f206-4139-9995-97aa635ffc13" included="#3515e9ae-f39e-4a0e-b9b4-9ea7f6cfc3b6"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="04686e3d-1043-42d5-846e-990da7e21286" included="#e746fc2e-642d-418d-80a1-c39e729923e3"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="95fe2da3-d906-4ed0-aa8d-60d30db112b9" included="#f4a99079-3357-46eb-8394-d1679b5a743a"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="71395654-33b7-4d07-bbae-52b63797b5f2" involved="#81ccb9c9-6259-40bd-b1aa-219b622f1588"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="3515e9ae-f39e-4a0e-b9b4-9ea7f6cfc3b6" name="Conduct Rendezvous Operations"
+            description="&lt;p>Ability to approach the Target Vehicle from an initial separation distance and progressively reduce the relative distance while maintaining safe flight conditions.&lt;/p>&#xA;">
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="60989a4c-4893-4740-922b-9097724094bd" included="#32ba650b-a244-4f52-a0f8-265d7b6b624b"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="52319da8-27db-4eb9-bdc5-1400403cf67c" included="#cd542894-2673-4884-bcfe-9394409d1a3d"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="32ba650b-a244-4f52-a0f8-265d7b6b624b" name="Perform Far-Range Rendezvous"
+            description="&lt;p>Ability to execute the initial approach toward the Target Vehicle, reducing the separation distance from the rendezvous initiation point to the proximity operations region.&lt;/p>&#xA;"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="cd542894-2673-4884-bcfe-9394409d1a3d" name="Perform Close-Range Rendezvous"
+            description="&lt;p>Ability to perform controlled close-range approach maneuvers while maintaining acceptable relative position, velocity, and vehicle safety constraints.&lt;/p>&#xA;"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="e746fc2e-642d-418d-80a1-c39e729923e3" name="Conduct Proximity Operations"
+            description="&lt;p>Ability to perform controlled operations in the vicinity of the Target Vehicle while maintaining relative navigation, trajectory control, and passive safety constraints.&lt;/p>&#xA;">
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="a513cef9-22d6-4f9b-9e3c-b9689378a16a" included="#352254c4-d28a-4b53-928c-bc7ca7d8617c"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="f4a99079-3357-46eb-8394-d1679b5a743a" name="Execute Docking Operations"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="352254c4-d28a-4b53-928c-bc7ca7d8617c" name="Maintain Passive Safety"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="2e07d378-e728-42ca-81a0-2da2d1638cc1" name="Provide Space-to-Ground Communication Services">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="00e3d572-e6aa-4289-9668-7500c7200659" involved="#81ccb9c9-6259-40bd-b1aa-219b622f1588"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="c42fe4b5-ad72-4fd5-8885-c929e1224d89" involved="#1f14733a-763e-4e36-8f86-2b07cec21398"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="bb590910-c06a-444b-91e7-fe34dcf5ec48" involved="#bcdad26b-dfd9-40dc-b4f6-7559debada50"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="2410ad10-a951-40cf-9892-0df50e23653b" name="Manage RPOD Contingencies">
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="d131eb6e-8af9-485d-9f50-77b8d3233692" included="#292d07a0-96f7-43b0-9fa4-d1da53b572c4"/>
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="ae5d442c-85ec-432d-8b6a-c68ecfb9c078" included="#1825827e-ca71-4d0b-a96f-fa6df6d44a54"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="292d07a0-96f7-43b0-9fa4-d1da53b572c4" name="Execute Abort and Retreat Operations"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="1825827e-ca71-4d0b-a96f-fa6df6d44a54" name=" Maintain Autonomous Safety During Communication Loss"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="680919a2-f4f6-4515-9f1c-26d73e520669" name="Plan RPOD Operations">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="ac2135ab-f07f-4dfa-be39-7740ece5a8d2" involved="#2bde9002-7694-422d-ab8f-e0c1fe2fd9b7"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="41cd28ff-3ef9-49c0-b0eb-7b1b07678a72" name="Monitor Mission Execution">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="ba9ed6fc-ea49-49ae-9fee-77741851b82c" involved="#ecd6e4ea-51ec-4400-a299-27885e9f1a14"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="6485b492-488a-4d23-9edd-cccf0bce282a" name="Assess Flight Dynamics Conditions">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="469e359d-5f35-438c-bc87-d1a75e361dad" involved="#2bde9002-7694-422d-ab8f-e0c1fe2fd9b7"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="45594d25-b361-4501-8163-8b65919245eb" name="Assess GNC Operational Performance">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="84a486c8-e996-467d-b6cc-755d653a3e88" involved="#b65c9873-ca7b-43f2-9e70-bde14a7757c7"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="06f2ff0f-28bd-4cf1-9adc-8efcd1839223" name="Manage Mission Communications">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="27a414b2-87da-4997-a174-894a79a080f3" involved="#5ad6478f-360a-4df9-acb8-560f9015b9ad"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="9e892260-a0a7-4311-aec4-a9897a4d4271" name="Manage Mission Command and Telemetry Operations">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="9ee95475-1443-413b-85f2-93bbeac03e8d" involved="#d6792af0-876b-4cbb-968c-53cd92873792"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="18b4cd30-b876-4453-975e-546c8739660d" name="Assess Mechanical and Power Readiness">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="702e1b1c-5af1-4adf-a825-b517a0ab9ce6" involved="#c5044361-1be9-4231-ac0a-f49c64d8d68e"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="aa869775-c7f5-4a17-96d4-b2602c8dd38d" name="Assess RPOD Operational Readiness">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="e3cc7420-28eb-4cf1-8e86-4943e1bec9cb" involved="#c5044361-1be9-4231-ac0a-f49c64d8d68e"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="0136aea4-40db-4c17-8d42-4e45554e911b" involved="#5ad6478f-360a-4df9-acb8-560f9015b9ad"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="f3020184-4577-4367-9e0a-56f92c65456f" involved="#2bde9002-7694-422d-ab8f-e0c1fe2fd9b7"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="9a5e4b4b-4b1c-421b-88b6-0dcb299d6ab1" involved="#d6792af0-876b-4cbb-968c-53cd92873792"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="a1032e9b-d5c4-4ba0-a8cf-b96c0875afd1" involved="#ecd6e4ea-51ec-4400-a299-27885e9f1a14"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="afefe4ef-27b7-4579-96b0-d08f59799cb7" involved="#ac02bb72-81f9-48e0-9a10-999d0f96f0bb"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="4ac3687b-2edb-4751-9d37-876554e23ea3" involved="#b65c9873-ca7b-43f2-9e70-bde14a7757c7"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="cb07bc72-8c79-4ab6-a0ae-ec5dbe5f0432" name="Provide Mission Go/No-Go Decisions">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="41482e18-7813-48f7-a91c-da3f364bb4b9" involved="#ac02bb72-81f9-48e0-9a10-999d0f96f0bb"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="9579a6b4-dd04-4f6b-8e95-4ffef22dba82" name="Authorize Mission Operations">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="56c211e7-cc0a-4194-b823-2c94d8a3b38e" involved="#ac02bb72-81f9-48e0-9a10-999d0f96f0bb"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="305b49d1-0807-433f-995e-00841ee638df" name="Provide Docking Conditions">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="a627e59f-5616-4644-9414-6297355cc400" involved="#ecd6e4ea-51ec-4400-a299-27885e9f1a14"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="c9f41b83-b5c1-461a-99e1-09264a6f4f80" name="Provide Ground-to-Space Communication Services">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="7fb03e38-301a-4c90-9734-76837fdeec2a" involved="#4df72e9b-2cef-4c01-acf9-33060444cc71"/>
+        </ownedOperationalCapabilities>
+      </ownedAbstractCapabilityPkg>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="789762b2-9ff0-42e7-bfa3-4f469ea272b0" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="429670ca-10ee-4ce8-9e03-164977570cc2" name="Data"/>
+      <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="989ae5ed-e76c-4cde-96b6-38c40ee6d560"
+          name="Roles"/>
+      <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="9fea1fc5-c6d4-4698-a12c-18d8c3746829"
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="8628dcb9-f301-4c2a-9f34-35aa78cc23df"
+            name="Ground Segment" abstractType="#d79e0f5c-b459-44d0-bee3-5018e1bfd3e7"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="20e04db8-05b7-4fd2-813e-6a2a525e89d3"
+            name="Space Segment" abstractType="#f0a8087a-bbdd-42a0-9fa9-f1bc6da3f97a"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="58c6b505-bb55-4821-acad-faa1499946f4"
+            name="Space" abstractType="#1155430d-74d9-440f-b1b6-b0d2ae52ba8c"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="d79e0f5c-b459-44d0-bee3-5018e1bfd3e7"
+            name="Ground Segment">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b4a14261-2c8e-45d6-aa01-fb3d4993dbff"
+              name="Mission Control Center (MCC)" abstractType="#b35dd03c-943e-4f08-8762-e2681a77b06d"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="dd35ba16-47cc-413b-a7ab-8f4f53afa6dd"
+              name="Ground Communication Facilities" abstractType="#4df72e9b-2cef-4c01-acf9-33060444cc71"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="b35dd03c-943e-4f08-8762-e2681a77b06d"
+              name="Mission Control Center (MCC)">
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="2c01a608-7d20-4803-b47b-74b6e1e85e62"
+                name="Guidance, Navifation &amp; Control Systems Officer (GNC)" abstractType="#b65c9873-ca7b-43f2-9e70-bde14a7757c7"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="2075efb0-cc0c-4c83-9996-b7aaaf8c36d4"
+                name="Flight Director (Flight)" abstractType="#ac02bb72-81f9-48e0-9a10-999d0f96f0bb"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="6a2b3209-dc80-4c5c-95b1-dbefbc1b7a2a"
+                name="Visiting Vehicle Officer ( VVO)" abstractType="#ecd6e4ea-51ec-4400-a299-27885e9f1a14"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="3f655a98-8b26-410f-8c20-ac21bec694e9"
+                name="Command &amp; Data Handling Officer (C&amp;DH)" abstractType="#d6792af0-876b-4cbb-968c-53cd92873792"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b1e7f167-18dc-4909-8092-dd6f55ed6cc4"
+                name="Flight Dynamics Officer (FDO)" abstractType="#2bde9002-7694-422d-ab8f-e0c1fe2fd9b7"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="8617b79b-2377-406b-93d0-e43879dfb068"
+                name="Integrated Communications Officer (INCO)" abstractType="#5ad6478f-360a-4df9-acb8-560f9015b9ad"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="e7aa4a3b-b166-4d2e-a31b-e6fe852c7b74"
+                name="Mechanical &amp; Power Officer (MPO)" abstractType="#c5044361-1be9-4231-ac0a-f49c64d8d68e"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="b65c9873-ca7b-43f2-9e70-bde14a7757c7"
+                name="Guidance, Navifation &amp; Control Systems Officer (GNC)" summary=""
+                description="&lt;p>The GNC monitors all vehicle guidance, navigation, and control systems. Also responsible for propulsion systems such as the service propulsion system and reaction control system (RCS).&lt;/p>&#xA;"
+                actor="true" human="true"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="ac02bb72-81f9-48e0-9a10-999d0f96f0bb"
+                name="Flight Director (Flight)" summary="" description="&lt;p>&amp;nbsp;The team leader who holds final authority over all real-time operational decisions, risk management, and vehicle safety.&lt;/p>&#xA;"
+                actor="true" human="true"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="ecd6e4ea-51ec-4400-a299-27885e9f1a14"
+                name="Visiting Vehicle Officer ( VVO)" summary="" description="&lt;p>Coordinates traffic, docking, and undocking for incoming vehicles to the Target Vehicle.&lt;/p>&#xA;"
+                actor="true" human="true"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="d6792af0-876b-4cbb-968c-53cd92873792"
+                name="Command &amp; Data Handling Officer (C&amp;DH)" summary="" description="&lt;p>Monitors the avionics and computer systems.&lt;/p>&#xA;"
+                actor="true" human="true"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="2bde9002-7694-422d-ab8f-e0c1fe2fd9b7"
+                name="Flight Dynamics Officer (FDO)" summary="" description="&lt;p>&amp;nbsp;Plans and monitors the spacecraft&amp;#39;s orbital path, rendezvous maneuvers, and re-entry trajectories.&lt;/p>&#xA;"
+                actor="true" human="true"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="5ad6478f-360a-4df9-acb8-560f9015b9ad"
+                name="Integrated Communications Officer (INCO)" summary="" description="&lt;p>Monitors all of Visiting Vehicle&amp;rsquo;s communications systems.&lt;/p>&#xA;"
+                actor="true" human="true"/>
+            <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="c5044361-1be9-4231-ac0a-f49c64d8d68e"
+                name="Mechanical &amp; Power Officer (MPO)" summary="" description="&lt;p>Is responsible for electrical, mechanical, structural, and landing and recovery systems.&lt;/p>&#xA;"
+                actor="true" human="true"/>
+          </ownedEntities>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4df72e9b-2cef-4c01-acf9-33060444cc71"
+              name="Ground Communication Facilities"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="f0a8087a-bbdd-42a0-9fa9-f1bc6da3f97a"
+            name="Space Segment">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="4db09181-1357-4654-9dbf-aadaa394f5d4"
+              name="Visiting Vehicle (V.V - Chaser)" abstractType="#81ccb9c9-6259-40bd-b1aa-219b622f1588"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="3e18a247-e475-4645-aa84-45e6206c5445"
+              name="Target Vehicle" abstractType="#1f14733a-763e-4e36-8f86-2b07cec21398"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="5c2639a2-c453-445f-972c-f1a210099b32"
+              name="Communication Satelite Relays" abstractType="#bcdad26b-dfd9-40dc-b4f6-7559debada50"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="81ccb9c9-6259-40bd-b1aa-219b622f1588"
+              name="Visiting Vehicle (V.V - Chaser)"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="1f14733a-763e-4e36-8f86-2b07cec21398"
+              name="Target Vehicle"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="bcdad26b-dfd9-40dc-b4f6-7559debada50"
+              name="Communication Satelite Relays"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="1155430d-74d9-440f-b1b6-b0d2ae52ba8c"
+            name="Space">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="321e4fc3-47a3-40aa-bef3-f95737133a6b"
+              name="Moon" abstractType="#2fcf276c-3b5e-427c-858e-24740602092c"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="d10cb227-c269-48db-b01a-492df7a9de4c"
+              name="Earth" abstractType="#f43d95d6-c839-49c7-9493-b183db86380b"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="da0515a2-984f-42b3-af85-d8c724af2b22"
+              name="Sun" abstractType="#51601398-8b0f-453a-aba2-b3912e5f8e2e"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="2fcf276c-3b5e-427c-858e-24740602092c"
+              name="Moon"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="f43d95d6-c839-49c7-9493-b183db86380b"
+              name="Earth"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="51601398-8b0f-453a-aba2-b3912e5f8e2e"
+              name="Sun"/>
+        </ownedEntities>
+      </ownedEntityPkg>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
+        id="3ab85537-3b97-4277-8321-35161aa625c1" name="System Analysis">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemFunctionPkg"
+          id="7eb6684d-0090-4d1a-b4ad-a5cb0aad85b3" name="System Functions">
+        <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+            id="8c62382d-a3c9-4c08-a721-217a4a7e4868" name="Root System Function">
+          <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+              id="c14a1bbf-1ddc-4586-90fc-fab64aa6a50e" targetElement="#6490eda9-1fbf-4242-9ea5-e861383af7b6"
+              sourceElement="#8c62382d-a3c9-4c08-a721-217a4a7e4868"/>
+        </ownedSystemFunctions>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
+          id="4e2c94c8-7b3e-4162-83fb-6c6c8e0511ec" name="Capabilities"/>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="5a810e12-324b-4d34-9df0-9285f9dbac22" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="29d46880-1c5d-4659-a7e8-83383430a33f" name="Data">
+        <ownedDataPkgs xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+            id="9cc3e1bb-a69a-49cb-84f4-7129c205a46c" name="Predefined Types">
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:BooleanType"
+              id="38abe08b-20cb-48eb-97cc-b2ea2893ba1a" name="Boolean" visibility="PUBLIC">
+            <ownedLiterals xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralBooleanValue"
+                id="0f356041-764f-449b-a0bf-e447b5fbb210" name="True" abstractType="#38abe08b-20cb-48eb-97cc-b2ea2893ba1a"
+                value="true"/>
+            <ownedLiterals xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralBooleanValue"
+                id="4bb828fa-8f03-4df7-9757-e4c2bdef48d0" name="False" abstractType="#38abe08b-20cb-48eb-97cc-b2ea2893ba1a"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="e86fb5c0-c756-4430-8f6d-e66b81731dd9" name="Byte" visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="7a29f56f-5c1a-4016-9a4e-143c44a8e334" name="" abstractType="#e86fb5c0-c756-4430-8f6d-e66b81731dd9"
+                value="0"/>
+            <ownedMaxValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="50a27897-efc5-4fec-80d5-5b3ce6204b8c" name="" abstractType="#e86fb5c0-c756-4430-8f6d-e66b81731dd9"
+                value="255"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:StringType"
+              id="ca0cbf97-d85a-4d81-b13f-8d75889aed74" name="Char" visibility="PUBLIC">
+            <ownedMinLength xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="c4003d3d-d18b-4732-99b5-622b9fd09a2f" name="" abstractType="#22610067-37f4-4522-8619-eb5b8f72358b"
+                value="1"/>
+            <ownedMaxLength xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="a1e3b4a8-07c8-412d-b01b-c7e06929c767" name="" abstractType="#22610067-37f4-4522-8619-eb5b8f72358b"
+                value="1"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="27923297-385f-4d6d-b4b7-88ef38b96f35" name="Double" discrete="false"
+              visibility="PUBLIC" kind="FLOAT"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="e5afbb53-325e-4147-931c-7a7d7e48f8af" name="Float" discrete="false"
+              visibility="PUBLIC" kind="FLOAT"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="a556f0e7-35ee-4728-8676-769e4dcb90d9" name="Hexadecimal" visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="561a962c-9546-449c-a240-a2fde8204f15" name="" abstractType="#a556f0e7-35ee-4728-8676-769e4dcb90d9"
+                value="0"/>
+            <ownedMaxValue xsi:type="org.polarsys.capella.core.data.information.datavalue:BinaryExpression"
+                id="755078a8-ee52-40af-b587-6ed8de001ece" abstractType="#a556f0e7-35ee-4728-8676-769e4dcb90d9"
+                operator="SUB">
+              <ownedLeftOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:BinaryExpression"
+                  id="7eb488a8-40ce-492a-a48d-27a410762ce5" operator="POW">
+                <ownedLeftOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                    id="e5e4e821-6c99-47e0-84f6-c84cd12fbce9" value="2"/>
+                <ownedRightOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                    id="4ed8a66e-4033-4d8c-88ac-e92cdcf15d6b" value="64"/>
+              </ownedLeftOperand>
+              <ownedRightOperand xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                  id="8bd19231-addf-4801-ad31-fd3c01eda134" value="1"/>
+            </ownedMaxValue>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="8ac36f1e-a136-41f1-93fa-e06519493f05" name="Integer" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="17537671-2a9e-4bde-913d-907d3f34addb" name="Long" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="6dff9cde-2381-44d9-8305-ea4d7f371a42" name="LongLong" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="3db0be81-bdf6-42d4-b626-5a4cf2750757" name="Short" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:StringType"
+              id="90407429-12cb-4182-aa59-937fa1a97338" name="String" visibility="PUBLIC"/>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="2d79317f-f44f-4382-88b2-065b198d3f7f" name="UnsignedInteger" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="fd0e877e-d357-4163-8c48-328c0370ba56" name="" abstractType="#2d79317f-f44f-4382-88b2-065b198d3f7f"
+                value="0"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="22610067-37f4-4522-8619-eb5b8f72358b" name="UnsignedShort" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="b6405288-1de4-435d-88bb-cde93a42d7fd" name="" abstractType="#22610067-37f4-4522-8619-eb5b8f72358b"
+                value="0"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="0f83eef7-c74f-41d5-994f-70eaba640f36" name="UnsignedLong" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="c6865156-107d-4a2c-8865-f901afebe49a" name="" abstractType="#0f83eef7-c74f-41d5-994f-70eaba640f36"
+                value="0"/>
+          </ownedDataTypes>
+          <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:NumericType"
+              id="6156d389-c916-4422-b10e-668982fb4bb5" name="UnsignedLongLong" maxInclusive="false"
+              visibility="PUBLIC">
+            <ownedMinValue xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
+                id="9d0a5016-07a4-453e-a1dc-e55a3cfa7701" name="" abstractType="#6156d389-c916-4422-b10e-668982fb4bb5"
+                value="0"/>
+          </ownedDataTypes>
+        </ownedDataPkgs>
+      </ownedDataPkg>
+      <ownedSystemComponentPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"
+          id="873d15ee-9608-4900-a6f2-42765c44b049" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="ab389a25-f68d-47f0-868d-b66ec3a34b1a"
+            name="System" abstractType="#162c5c88-9407-4f96-b89f-ca27bc5b28c6"/>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="162c5c88-9407-4f96-b89f-ca27bc5b28c6" name="System">
+          <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
+              id="55ee801c-50d8-410d-8abe-4a258dd1a055" name="System State Machine">
+            <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
+                id="1a80fbf2-1899-45f9-9123-a06e22bcf863" name="Default Region"/>
+          </ownedStateMachines>
+        </ownedSystemComponents>
+      </ownedSystemComponentPkg>
+      <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="dd181034-ed63-4503-bcf6-4f931c22d2f8"
+          name="Missions"/>
+      <ownedOperationalAnalysisRealizations xsi:type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"
+          id="1d4c9583-029f-4093-8abe-3882b4af1493" targetElement="#c5a3e878-b117-4f32-8226-b4b63cbb5e0f"
+          sourceElement="#3ab85537-3b97-4277-8321-35161aa625c1"/>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.la:LogicalArchitecture"
+        id="2e8c47ba-e201-4396-9622-69706cb64f32" name="Logical Architecture">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.la:LogicalFunctionPkg"
+          id="1bcd11eb-613a-4ae3-98d2-5cb9d652c9de" name="Logical Functions">
+        <ownedLogicalFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
+            id="18283217-19e0-4328-89c0-495715f3f6ab" name="Root Logical Function">
+          <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+              id="18d9fc39-49d7-4c5f-b832-0a7d12400695" targetElement="#8c62382d-a3c9-4c08-a721-217a4a7e4868"
+              sourceElement="#18283217-19e0-4328-89c0-495715f3f6ab"/>
+        </ownedLogicalFunctions>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
+          id="bb55e063-ea0e-4b46-9635-063f2b863f24" name="Capabilities"/>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="1f55fd03-db3e-4e8f-bc36-c0829d6d9ad9" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="18ff79fa-014c-4e9b-8c98-457de62ea187" name="Data"/>
+      <ownedLogicalComponentPkg xsi:type="org.polarsys.capella.core.data.la:LogicalComponentPkg"
+          id="6c569d65-4066-4c2f-9430-b5d0cf2f77a6" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="4b218f7c-21e4-4acc-83a6-cd82087f666a"
+            name="Logical System" abstractType="#ffc87c36-eab4-4298-b7de-87a4d2eabe82"/>
+        <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+            id="ffc87c36-eab4-4298-b7de-87a4d2eabe82" name="Logical System">
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="f7f3e0b8-23df-454e-af58-4760cfcaec77" targetElement="#162c5c88-9407-4f96-b89f-ca27bc5b28c6"
+              sourceElement="#ffc87c36-eab4-4298-b7de-87a4d2eabe82"/>
+        </ownedLogicalComponents>
+      </ownedLogicalComponentPkg>
+      <ownedSystemAnalysisRealizations xsi:type="org.polarsys.capella.core.data.la:SystemAnalysisRealization"
+          id="cefdfdbe-af7b-47a1-8f1b-297cd4738b95" targetElement="#3ab85537-3b97-4277-8321-35161aa625c1"
+          sourceElement="#2e8c47ba-e201-4396-9622-69706cb64f32"/>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.pa:PhysicalArchitecture"
+        id="b1d64317-426d-4294-940b-0a0a4f956968" name="Physical Architecture">
+      <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunctionPkg"
+          id="68e73ac8-798f-4e04-80b6-1d969878018f" name="Physical Functions">
+        <ownedPhysicalFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
+            id="d3e37821-904c-480d-b717-a82ca084f6e8" name="Root Physical Function">
+          <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+              id="5472f8fd-020e-4d5f-8e60-b9583c2f90ab" targetElement="#18283217-19e0-4328-89c0-495715f3f6ab"
+              sourceElement="#d3e37821-904c-480d-b717-a82ca084f6e8"/>
+        </ownedPhysicalFunctions>
+      </ownedFunctionPkg>
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
+          id="bdb9bf84-2148-4274-9bc6-c9047b8d6c89" name="Capabilities"/>
+      <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
+          id="13258823-80d1-427a-bbf2-3da801c997f3" name="Interfaces"/>
+      <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
+          id="5affb0dc-021c-4320-9ba5-4661532d696f" name="Data"/>
+      <ownedPhysicalComponentPkg xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponentPkg"
+          id="d74a97e0-4fc7-4220-9958-a5688ec66853" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="ba6764ca-2a3c-4952-a7f8-f7554723b196"
+            name="Physical System" abstractType="#c82f3b21-8959-46d7-a220-e9656b276e1f"/>
+        <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+            id="c82f3b21-8959-46d7-a220-e9656b276e1f" name="Physical System">
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="d4eaaf13-7f0f-4b6e-9a6c-06ea04b2810b" targetElement="#ffc87c36-eab4-4298-b7de-87a4d2eabe82"
+              sourceElement="#c82f3b21-8959-46d7-a220-e9656b276e1f"/>
+        </ownedPhysicalComponents>
+      </ownedPhysicalComponentPkg>
+      <ownedLogicalArchitectureRealizations xsi:type="org.polarsys.capella.core.data.pa:LogicalArchitectureRealization"
+          id="644dd1b6-5a24-474f-a4f1-abd98fe3b51e" targetElement="#2e8c47ba-e201-4396-9622-69706cb64f32"
+          sourceElement="#b1d64317-426d-4294-940b-0a0a4f956968"/>
+    </ownedArchitectures>
+    <ownedArchitectures xsi:type="org.polarsys.capella.core.data.epbs:EPBSArchitecture"
+        id="657cf554-ed5f-46f5-a834-63a42dfdc943" name="EPBS Architecture">
+      <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
+          id="7e562ffb-e14d-48de-9bde-bc49ea6604b0" name="Capabilities"/>
+      <ownedConfigurationItemPkg xsi:type="org.polarsys.capella.core.data.epbs:ConfigurationItemPkg"
+          id="20ca265b-507d-4607-974a-b7cf4a7c0170" name="Structure">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="8b1cb0eb-ff31-4d00-87ef-345cd34d6f36"
+            name="System" abstractType="#400c0fdd-d40a-4f18-af2e-61fa21e44647"/>
+        <ownedConfigurationItems xsi:type="org.polarsys.capella.core.data.epbs:ConfigurationItem"
+            id="400c0fdd-d40a-4f18-af2e-61fa21e44647" name="System" kind="SystemCI">
+          <ownedPhysicalArtifactRealizations xsi:type="org.polarsys.capella.core.data.epbs:PhysicalArtifactRealization"
+              id="0b44e0fd-7b48-4d07-9186-52eb7586b2b9" targetElement="#c82f3b21-8959-46d7-a220-e9656b276e1f"
+              sourceElement="#400c0fdd-d40a-4f18-af2e-61fa21e44647"/>
+        </ownedConfigurationItems>
+      </ownedConfigurationItemPkg>
+      <ownedPhysicalArchitectureRealizations xsi:type="org.polarsys.capella.core.data.epbs:PhysicalArchitectureRealization"
+          id="9ef60519-205a-452f-ab9c-51bcd7f04208" targetElement="#b1d64317-426d-4294-940b-0a0a4f956968"
+          sourceElement="#657cf554-ed5f-46f5-a834-63a42dfdc943"/>
+    </ownedArchitectures>
+  </ownedModelRoots>
+</org.polarsys.capella.core.data.capellamodeller:Project>
